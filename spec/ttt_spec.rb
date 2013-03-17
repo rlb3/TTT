@@ -17,8 +17,13 @@ describe TTT::Board::Cell do
     cell.content.should == '.'
   end
 
-  it 'should take a players update' do
-    cell.players_move(TestPlayer.new)
-    cell.content.should == 'X'
+  context 'when player makes a move' do
+
+    let(:player) { TestPlayer.new }
+
+    it 'should mirror that move' do
+      cell.players_move(player)
+      cell.content.should == player.move
+    end
   end
 end
