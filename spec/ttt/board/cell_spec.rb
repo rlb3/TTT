@@ -1,13 +1,7 @@
-require 'spec_helper'
+require_relative '../../spec_helper'
 
 describe TTT::Board::Cell do
   let(:cell) { TTT::Board::Cell.new(position: 1) }
-
-  class TestPlayer
-    def move
-      'X'
-    end
-  end
 
   it 'should not be nil' do
     cell.should_not be_nil
@@ -18,6 +12,12 @@ describe TTT::Board::Cell do
   end
 
   context 'when player makes a move' do
+
+    class TestPlayer
+      def move
+        'X'
+      end
+    end
 
     let(:player) { TestPlayer.new }
 
