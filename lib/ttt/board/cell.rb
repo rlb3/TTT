@@ -1,5 +1,5 @@
 module TTT
-  module Board
+  class Board
     class Cell
       attr_accessor :content
 
