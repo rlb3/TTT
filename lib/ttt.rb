@@ -1,5 +1,3 @@
 require "ttt/version"
-
-module TTT
-  # Your code goes here...
-end
+require "ttt/board"
+require "ttt/board/cell"
