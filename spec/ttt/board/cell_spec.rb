@@ -21,7 +21,7 @@ describe TTT::Board::Cell do
 
     let(:player) { TestPlayer.new }
 
-    it 'should mirror that move' do
+    it 'should store that move' do
       cell.players_move(player)
       cell.content.should == player.move
     end

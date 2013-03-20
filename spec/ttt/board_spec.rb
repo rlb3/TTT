@@ -15,7 +15,11 @@ describe TTT::Board do
   end
 
   it 'should know it\'s size' do
-    board.size == 9
+    board.size.should == 9
+  end
+
+  it 'should let a player make a move' do
+    pending
   end
 
 end
